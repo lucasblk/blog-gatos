@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body, input {
+    font-family: 'Mulish', sans-serif;
+}
+
+:root {
+    font-size: 62.5%; 
+    --color-darkblue: #1c5e7c;
+    --color-lightdarkblue: #387e96;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.app {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: repeat(3, max-content 1fr max-content);
+}
+
+header {
+    padding: 16px 28px;
+    background-color: var(--color-darkblue);
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+.input-wrapper {
+    flex: 1;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 12px 14px;
+
+    border: 0;
+    border-radius: .5rem;
+
+    background-color: var(--color-lightdarkblue);
+}
+.input-wrapper input::placeholder {
+    color: white;
+}
+
+.active {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    
+}
+header .avatar {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+
+}
+.title h1 {
+    padding-bottom: 1rem;
+}
+
+.title {
+    padding: 3.2rem 2.2rem 0px;
+}
+
+main section {
+    padding: 3.2rem 2.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+main .gato {
+    width: 100%
+    
+}
+
+
+aside {
+    padding: 3.2rem;
+}
+
+aside h1 {
+    padding-bottom: 3.2rem;
+}
+
+aside ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+aside li {
+    display: flex;
+    gap: 2rem;
+}
+
+aside li div h2 {
+    margin-bottom: .5rem;
+}
+
+aside li div p {
+    max-width: 30rem;
+}
+
+footer {
+    background-color: var(--color-darkblue);
+    color: white;
+    text-align: center;
+    padding: 2.6rem 1.6rem;
+}
+
+@media (min-width:800px) {
+    .container {
+        padding: 0px 0px 0px 10rem;
+    }
+    main .gato {
+        width: 700px;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-top: 3.5rem;
+    }
+    .title {
+        display: flex;
+        flex-direction: row;
+        gap: 11rem;
+
+    }
+    
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr max-content);
+        gap: 2rem;
+    }
+}
