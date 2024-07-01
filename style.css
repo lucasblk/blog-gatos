@@ -69,6 +69,22 @@ header .avatar {
     padding: 3.2rem 2.2rem 0px;
 }
 
+img {
+    transition: 300ms;
+}
+img:hover {
+    scale: 1.05;
+}
+button {
+    all: unset;
+    transition: 200ms;
+}
+
+button:hover {
+    scale: 1.1;
+    transform: rotate(-5deg);
+}
+
 main section {
     padding: 3.2rem 2.2rem;
     display: flex;
@@ -140,3 +156,27 @@ footer {
         gap: 2rem;
     }
 }
+
+header {
+    animation: fromTop 400ms 200ms backwards ease-in-out;
+}
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+footer {
+    animation: fromBottom 400ms 200ms backwards ease-in-out;
+}
+
+main,aside {
+    animation: fromBottom 600ms 200ms backwards;
+}
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+
